@@ -48,12 +48,14 @@ class OrderBooking:
         res.send_keys(random_city)
         time.sleep(3)
         res.send_keys(Keys.TAB)
+        time.sleep(5)
+        self.driver.find_element(By.XPATH, "//button[normalize-space()='SEARCH ADDRESS']").click()
 
-    def searchAddress(self):
-        self.driver.find_element(By.CSS_SELECTOR, self.search_address_selector).click()
+    # def searchAddress(self):
+    #     self.driver.find_element(By.CSS_SELECTOR, self.search_address_selector).click()
 
     def confirmLocation(self):
-        self.driver.find_element(By.CSS_SELECTOR, self.confirm_location_selector).click()
+        # self.driver.find_element(By.CSS_SELECTOR, self.confirm_location_selector).click()
         self.driver.execute_script('window.scrollBy(0,500);')
         time.sleep(3)
         self.driver.find_element(By.CSS_SELECTOR,'.btn.btn.btn-red.next').click()

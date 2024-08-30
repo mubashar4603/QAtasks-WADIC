@@ -27,9 +27,10 @@ class Test_001_Login:
         self.lp.clickLogin()
         time.sleep(2)
         self.lp.searchLocation()
-        time.sleep(2)
-        self.lp.searchAddress()
-        time.sleep(4)
+        # time.sleep(4)
+        # self.lp.searchAddress()
+        time.sleep(3)
+
         self.lp.confirmLocation()
         time.sleep(5)
         actual_title = self.driver.title
